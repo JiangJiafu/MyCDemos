@@ -1,0 +1,4 @@
+This project is my personal project. In this project, I show how to implement
+some functions in C language.
+
+To build this project, user 'make clean all'.
