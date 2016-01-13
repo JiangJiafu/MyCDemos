@@ -75,7 +75,7 @@ void create_objects()
 	root=cJSON_CreateObject();	
 	cJSON_AddItemToObject(root, "name", cJSON_CreateString("Jack (\"Bee\") Nimble"));
 	cJSON_AddItemToObject(root, "format", fmt=cJSON_CreateObject());
-	cJSON_AddStringToObject(fmt,"type",		"rect");
+	cJSON_AddStringToObject(fmt,"type",		"rect中国");
 	cJSON_AddNumberToObject(fmt,"width",		1920);
 	cJSON_AddNumberToObject(fmt,"height",		1080);
 	cJSON_AddFalseToObject (fmt,"interlace");

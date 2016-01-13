@@ -1,4 +1,5 @@
-SUBDIRS := src
+SUBDIRS :=  libs\
+            src
 
 .PHONY: all clean
 

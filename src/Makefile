@@ -1,7 +1,8 @@
 SUBDIRS := header_demo  \
            pthread_demo \
            str_demo     \
-           xml_demo     
+           xml_demo     \
+           json_demo
 
 .PHONY: all clean
 

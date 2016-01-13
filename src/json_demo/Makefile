@@ -1,15 +1,13 @@
-all: testWriter tree1 tree2
+INC_DIR = ../../libs/cjson
+CFLAGS = -I$(INC_DIR)
+LDFLAGS = -L../../libs/cjson
+all: test_json
 
-testWriter: testWriter.c
-	gcc -I /usr/include/libxml2/ -L /usr/lib64/ -lxml2 -o testWriter testWriter.c
-tree1: tree1.c
-	gcc -I /usr/include/libxml2/ -L /usr/lib64/ -lxml2 -o tree1 tree1.c
-
-tree2: tree2.c
-	gcc -I /usr/include/libxml2/ -L /usr/lib64/ -lxml2 -o tree2 tree2.c
+test_json: test.c
+	gcc $(CFLAGS) test.c -o test -lm $(LDFLAGS) -lcjson
 
 .PHONY: all clean
 
 
 clean:
-	rm -rf testWriter tree1 tree2 *.tmp
+	rm -rf test
