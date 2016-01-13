@@ -1,2 +1,18 @@
-str_demo: str_demo.c
-	gcc -o str_demo str_demo.c
+SUBDIRS := src
+
+.PHONY: all clean
+
+all:
+	@for subdir in $(SUBDIRS);                \
+	do                                        \
+		echo "making $@ in $$subdir";     \
+		(cd $$subdir && $(MAKE)) || exit; \
+	done;
+
+
+clean:
+	@for subdir in $(SUBDIRS);                        \
+	do                                                \
+		echo "making $@ in $$subdir";             \
+		(cd $$subdir && $(MAKE) clean) || exit;   \
+	done;
